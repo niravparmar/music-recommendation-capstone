@@ -20,11 +20,11 @@ function Signin({ providers }) {
   return (
     <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
-        <title>Login - Spotify</title>
+        <title>Login - Musicble</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src="https://rb.gy/y9mwtb"
+        src="/logo.jpg"
         height={250}
         width={600}
         objectFit="contain"
@@ -36,9 +36,12 @@ function Signin({ providers }) {
             className="text-white py-4 px-6 rounded-full bg-[#1db954] transition duration-300 ease-out border border-transparent uppercase font-bold text-xs md:text-base tracking-wider hover:scale-105 hover:bg-[#0db146]"
             onClick={() => signIn(provider.id)}
           >
-            Sign in with {provider.name}
+            {/* Sign in with {provider.name} */}
+            Sign in
+
           </button>
         </div>
+        
       ))}
     </div>
   );

@@ -7,7 +7,7 @@ function Loader() {
       <div className="pt-40 flex flex-col items-center space-y-4">
         <span className="relative w-[400px] h-[250px] lg:w-[550px] lg:h-[240px]">
           <Image
-            src="https://rb.gy/y9mwtb"
+            src="/logo.jpg"
             layout="fill"
             objectFit="contain"
             className="animate-pulse"

@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Music - Dashboard</title>
+        <title>Musicble - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Dashboard />
