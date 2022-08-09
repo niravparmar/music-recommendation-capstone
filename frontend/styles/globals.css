@@ -19,6 +19,11 @@
     @apply py-1.5 px-3 text-[#CECECE] bg-[#282828] rounded-xl text-xs font-bold border-2 border-[#484848];
   }
 
+  .labellogin {
+    color: white;
+    margin : 20;
+  }
+
   .genre {
     @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl py-2.5 px-3.5 text-[11px] font-bold cursor-default;
   }

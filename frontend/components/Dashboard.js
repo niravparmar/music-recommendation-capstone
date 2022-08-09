@@ -12,15 +12,21 @@ const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
 });
 
+let users = require('../spotify.json');
+
 function Dashboard() {
   const { data: session } = useSession();
-  const { accessToken } = session;
+  // const { accessToken } = session;
+  const { accessToken } = users.cred;
+
 
   const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
+
   const [showPlayer, setShowPlayer] = useState(false);
 
   useEffect(() => {
     setShowPlayer(true);
+
   }, []);
 
   const chooseTrack = (track) => {

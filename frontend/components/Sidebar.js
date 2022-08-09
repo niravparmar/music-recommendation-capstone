@@ -19,11 +19,11 @@ function Sidebar() {
       />
       <div className="flex flex-col space-y-8">
         <HomeIcon className="sidebarIcon text-white opacity-[0.85]" />
-        <RiCompassFill className="sidebarIcon text-2xl" />
+        {/* <RiCompassFill className="sidebarIcon text-2xl" />
         <FaMicrophoneAlt className="sidebarIcon ml-1" />
         <ChartBarIcon className="sidebarIcon" />
         <ClockIcon className="sidebarIcon" />
-        <DotsHorizontalIcon className="sidebarIcon" />
+        <DotsHorizontalIcon className="sidebarIcon" /> */}
       </div>
     </section>
   );

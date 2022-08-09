@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import Poster from "./Poster";
 import Search from "./Search";
 import Track from "./Track";
+let users = require('../spotify.json');
 
 function Body({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
-  const { accessToken } = session;
+  // const { accessToken } = session;
+  const { accessToken } = users.cred
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [newReleases, setNewReleases] = useState([]);

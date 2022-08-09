@@ -5,12 +5,20 @@ import { ViewGridIcon } from "@heroicons/react/solid";
 import Dropdown from "./Dropdown";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
+import { useRecoilState } from "recoil";
+
 import RecentlyPlayed from "./RecentlyPlayed";
+import { useremail } from "../atoms/playerAtom";
+
+let users = require('../spotify.json');
 
 function Right({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
-  const { accessToken } = session;
+  // const { accessToken } = session;
+  const { accessToken } = users.cred
+
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
+  const [usermail, setUsermail] = useRecoilState(useremail);
 
   // Recently Played Tracks...
   useEffect(() => {
@@ -52,7 +60,8 @@ function Right({ chooseTrack, spotifyApi }) {
           <h4 className="text-white font-semibold text-sm">Recently Played</h4>
           <ViewGridIcon className="text-[#686868] h-6" />
         </div>
-
+        {
+        usermail != "niravparmar@gmail.com" ? 
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide">
           {recentlyPlayed.map((track, index) => (
             <RecentlyPlayed
@@ -61,7 +70,7 @@ function Right({ chooseTrack, spotifyApi }) {
               chooseTrack={chooseTrack}
             />
           ))}
-        </div>
+        </div>:<div></div>}
         <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
           View All
         </button>
